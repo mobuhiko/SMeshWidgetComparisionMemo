@@ -1,10 +1,13 @@
 # SMeshWidgetComparisionMemo
 Comparision of different methods that using SMeshWidget
 
+## NOTICE
+
+This repository is mostly based on the GitHub repository mentioned in Method 1 because I just want to do some tests without creating materials (I am not a TA or artist). 
+
 ## Method 1 - Particle(Original)
 
 From [GitHub | dantreble/MeshWidgetExample](https://github.com/dantreble/MeshWidgetExample) mentioned in [Unreal Engine | Development | Rendering​ | SMeshWidget - Hardware Instanced Slate Meshes Thread](https://forums.unrealengine.com/t/smeshwidget-hardware-instanced-slate-meshes-thread/58020). 
-(The MeshWidgetExample repository is also the base of this repository. )
 
 ### Files
 
@@ -27,6 +30,11 @@ From [知乎 | 虚幻5渲染编程(UI篇)第一卷: Slate渲染框架并通过�
 StaticMeshWidget.h/cpp
 
 ## Result
+
+I download the project from GitHub mentioned in Method 1. And 
+ - copy that orange static mesh in the project
+ - break the link of screen position? to stop its rotation, and change the color to blue
+ - apply them to three methods (so 6 widgets in total)
 
 ![Ret1](https://github.com/mobuhiko/SMeshWidgetComparision/blob/main/Image/SMeshWidgetComparision1.png)
 
