@@ -1,13 +1,13 @@
-# SMeshWidgetComparisionMemo
-Comparision of different methods that using SMeshWidget
+# SMeshWidgetComparisonMemo
+Comparison of different methods using SMeshWidget
 
 ## NOTICE
 
-This repository is mostly based on the GitHub repository mentioned in Method 1 because I just want to do some tests without creating materials (I am not a TA or artist). 
+This repository is primarily based on the GitHub project referenced in Method 1, as the goal is to perform rendering tests without creating custom materials.
 
 ## Method 1 - Particle(Original)
 
-From [GitHub | dantreble/MeshWidgetExample](https://github.com/dantreble/MeshWidgetExample) mentioned in [Unreal Engine | Development | Rendering​ | SMeshWidget - Hardware Instanced Slate Meshes Thread](https://forums.unrealengine.com/t/smeshwidget-hardware-instanced-slate-meshes-thread/58020). 
+Based on [GitHub | dantreble/MeshWidgetExample](https://github.com/dantreble/MeshWidgetExample) mentioned in [Unreal Engine | Development | Rendering​ | SMeshWidget - Hardware Instanced Slate Meshes Thread](https://forums.unrealengine.com/t/smeshwidget-hardware-instanced-slate-meshes-thread/58020). 
 
 ### Files
 
@@ -15,7 +15,7 @@ ParticleWidget.h/cpp
 
 ## Method 2 - MyMesh
 
-From [知乎 | 直接在UMG上渲染模型](https://zhuanlan.zhihu.com/p/393217635)
+Based on [知乎 | 直接在UMG上渲染模型](https://zhuanlan.zhihu.com/p/393217635)
 
 ### Files
 
@@ -23,7 +23,7 @@ MyMeshWidget.h/cpp
 
 ## Method 3 - StaticMesh
 
-From [知乎 | 虚幻5渲染编程(UI篇)第一卷: Slate渲染框架并通过为UMG拓展MeshUI了解Slate的图元阶段](https://zhuanlan.zhihu.com/p/387752531)
+Based on [知乎 | 虚幻5渲染编程(UI篇)第一卷: Slate渲染框架并通过为UMG拓展MeshUI了解Slate的图元阶段](https://zhuanlan.zhihu.com/p/387752531)
 
 ### Files
 
@@ -31,21 +31,21 @@ StaticMeshWidget.h/cpp
 
 ## Result
 
-I download the project from GitHub mentioned in Method 1. And 
+I downloaded the project from GitHub mentioned in Method 1. And 
  - copy that orange static mesh in the project
- - break the link of screen position? to stop its rotation, and change the color to blue
+ - break the link of screen position? node to stop its rotation, and change the color to blue
  - apply them to three methods (so 6 widgets in total)
 
 ![Ret1](https://github.com/mobuhiko/SMeshWidgetComparision/blob/main/Image/SMeshWidgetComparision1.png)
 
-It looks like Method 3 does not work with particle mesh, but sometimes the mesh is actually rendered in a weired way (that line, and it is rotating). 
+It looks like Method 3 does not work with particle mesh, but sometimes the mesh is actually rendered in a weird way (that line, and it is rotating). 
 It sometimes appears by changing the alignment of the slot. 
 If you hide that widget, the line will also be hidden. 
 
 ![Ret2](https://github.com/mobuhiko/SMeshWidgetComparision/blob/main/Image/SMeshWidgetComparision2.png)
 
-For Method 3, I do not understand why it works, and it seems that it does not use mesh instance in code, which may lead some performance issue in some cases. 
+For Method 3, I do not understand why it works, and it seems that it does not use mesh instance in code, which may lead to performance issues in certain scenarios, although this has not been measured. 
 
 ## Conclusion
 
-All of the methods above have their own problems, so I don't think it is a good idea to use them in production. 
+Each method behaves incorrectly or unexpectedly in certain aspects., so I don't think it is a good idea to use them in production. 
